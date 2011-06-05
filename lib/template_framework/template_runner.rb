@@ -4,7 +4,9 @@ require 'rails_templater'
 require File.join(File.dirname(__FILE__), 'core_ext.rb')
 
 # Removed javascript_framework - should be passed as parameter to "rails new"
-%w(default orm testing_framework code_coverage template_engine sass cucumber).each do |recipe|
+# Removed sass - it is enabled by default in 3.1. Compass currently doesn't work
+# without a couple of hacks. Should be fixed by the time 3.1 is released.
+%w(default orm testing_framework code_coverage template_engine cucumber).each do |recipe|
   apply templater.recipe(recipe)
 end
 
