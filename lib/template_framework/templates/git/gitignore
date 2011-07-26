@@ -1,10 +1,23 @@
+#### `.gitignore`
+# osx noise
+.DS_Store
+profile
+*.swp
+
+# Webrat log
+webrat.log
+
+# Rails3 gitignore
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
 .ackrc
 .rvmrc
-config/database.yml
-config/mongoid.yml
+
+# From orig rails_templater
 public/cache/
 public/stylesheets/compiled/
 public/system/*
-tmp/restart.txt
 coverage/
 coverage.data
