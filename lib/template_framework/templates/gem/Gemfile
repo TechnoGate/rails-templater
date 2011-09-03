@@ -1,4 +1,0 @@
-source 'http://rubygems.org'
-
-gem "rails", "~> 3.0.9"
-gem "rails3-generators", "~> 0.17.4", :group => :development

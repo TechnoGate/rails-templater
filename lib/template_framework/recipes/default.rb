@@ -9,7 +9,5 @@ create_file "README.markdown"
 create_file "log/.gitkeep"
 create_file "tmp/.gitkeep"
 
-get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/html5.js"
-
 apply templater.recipe("git")
-#apply templater.recipe("gemfile_cleanup")
+gem "rails3-generators", "~> 0.17.4", :group => :development
