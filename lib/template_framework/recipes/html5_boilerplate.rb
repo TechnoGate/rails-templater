@@ -3,23 +3,17 @@ templater.post_bundler do
 
   say "\nFixing project for Rails 3.1+ with HTML5-boilerplate.\n", Thor::Shell::Color::YELLOW
 
-  copy_file "public/javascripts/modernizr.min.js", "app/assets/javascripts/"
-  copy_file "public/javascripts/plugins.js", "app/assets/javascripts/"
-  copy_file "public/javascripts/respond.min.js", "app/assets/javascripts/"
-  remove_file "public/javascripts/modernizr.min.js"
-  remove_file "public/javascripts/plugins.js"
-  remove_file "public/javascripts/respond.min.js"
-
-  remove_file "public/javascripts/jquery.js"
-  remove_file "public/javascripts/jquery.min.js"
-  remove_file "public/javascripts/rails.js" # used to provide UJS, but it is already provided by jquery-rails gem
-
-  remove_file "app/views/layouts/_javascripts.html.haml"
+  run "rm public/javascripts/jquery.js"
+  run "rm public/javascripts/jquery.min.js"
+  run "rm public/javascripts/rails.js"
+  run "cp public/javascripts/* app/assets/javascripts/"
+  run "rm public/javascripts/*"
+  run "rm app/views/layouts/_javascripts.html.haml"
   create_file "app/views/layouts/_javascripts.html.haml", templater.load_template("_javascripts.html.haml", "html5_boilerplate")
 
-  remove_file "app/assets/javascripts/application.js"
+  run "rm app/assets/javascripts/application.js"
   create_file "app/assets/javascripts/application.js", templater.load_template("application.js", "html5_boilerplate")
 
-  directory "app/assets/stylesheets", "app/stylesheets"
-  remove_dir "app/stylesheets"
+  run "mv app/stylesheets/* app/assets/stylesheets"
+  run "rmdir app/stylesheets"
 end
