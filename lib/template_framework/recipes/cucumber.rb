@@ -1,6 +1,6 @@
 if yes?("\n[Integration Testing] Would you like to add integration testing with Cucumber? [y|n]: ", Thor::Shell::Color::BLUE)
 
-  gem 'capybara', '0.4.0', :group => :test
+  gem "capybara", "~> 1.1.0", :group => :test
   gem 'cucumber-rails', :group => :test
   gem 'launchy', :group => :test
 
