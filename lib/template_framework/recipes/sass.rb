@@ -33,7 +33,7 @@ unless c == "n" || c == "no"
     framework_option = case design_framework
       when :compass_html5
         gem "html5-boilerplate", :group => :assets
-        "-r html5-boilerplate -u html5-boilerplate"
+        "-r html5-boilerplate -u html5-boilerplate --force"
       when :compass_blueprint
         "--using blueprint/basic"
       when :compass_blueprint_semantic
