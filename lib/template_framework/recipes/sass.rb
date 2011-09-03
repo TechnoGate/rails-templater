@@ -23,7 +23,7 @@ if yes?("\nWould you like to use Compass? [y|n]: ", Thor::Shell::Color::BLUE)
     when "5"
       :compass_960
     else
-      :none
+      :compass_html5
   end
 
   unless design_framework == :none

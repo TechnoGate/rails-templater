@@ -3,5 +3,3 @@ gsub_file 'config/application.rb', '# require "rails/test_unit/railtie"', 'requi
 if yes?("\nWould you like to use Shoulda contexts? [y|n]: ", Thor::Shell::Color::BLUE)
   gem 'shoulda-context', :group => :test
 end
-
-
