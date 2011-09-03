@@ -1,6 +1,6 @@
 if yes?("\n[Deployment] Would you like to use Capitrano for deployments? [y|n]: ", Thor::Shell::Color::BLUE)
   # Dependencies
-  gem "capistrano", "~> 2.5.20", :group => :development
+  gem "capistrano", "~> 2.8.0", :group => :development
 
   # Configurations
   create_file "Capfile", templater.load_template("Capfile", "capistrano")
