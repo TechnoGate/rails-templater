@@ -1,4 +1,5 @@
-if yes?("\nWould you like to use Compass? [y|n]: ", Thor::Shell::Color::BLUE)
+c = ask("\nWould you like to use Compass? [Y|n]: ", Thor::Shell::Color::BLUE)
+unless c == "n" || c == "no"
   design_options = {
     'Option' => 'Design Framework',
     '1' => 'Compass with HTML5-boilerplate',
