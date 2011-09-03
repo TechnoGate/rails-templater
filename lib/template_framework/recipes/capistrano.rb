@@ -1,4 +1,5 @@
-if yes?("\n[Deployment] Would you like to use Capitrano for deployments? [Y|n]: ", Thor::Shell::Color::BLUE)
+c = ask("\n[Deployment] Would you like to use Capitrano for deployments? [Y|n]: ", Thor::Shell::Color::BLUE)
+unless c == "n" || c == "no"
   # Dependencies
   gem "capistrano", "~> 2.8.0", :group => :development
 

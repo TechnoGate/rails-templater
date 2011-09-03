@@ -1,4 +1,5 @@
-if yes?("\n[Integration Testing] Would you like to add integration testing with Cucumber? [y|n]: ", Thor::Shell::Color::BLUE)
+c = ask("\n[Integration Testing] Would you like to add integration testing with Cucumber? [Y|n]: ", Thor::Shell::Color::BLUE)
+unless c == "n" || c == "no"
 
   gem "capybara", "~> 1.1.0", :group => :test
   gem 'cucumber-rails', :group => :test
