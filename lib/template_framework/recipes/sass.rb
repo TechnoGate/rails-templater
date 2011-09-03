@@ -44,27 +44,11 @@ if yes?("\nWould you like to use Compass? [y|n]: ", Thor::Shell::Color::BLUE)
 
     compass_command = "bundle exec compass init rails . #{framework_option}"
 
-=begin move
-mv public/javascripts/modernizr.min.js app/assets/javascripts
-mv public/javascripts/plugins.js app/assets/javascripts
-mv public/javascripts/respond.min.js app/assets/javascripts
-=end
-
-=begin remove
-rm public/javascripts/jquery.js
-rm public/javascripts/jquery.min.js
-rm public/javascripts/rails.js # used to provide UJS, but it is already provided by jquery-rails gem
-=end
-
-# Instructions from http://kucaahbe.github.com/2011/08/30/html5-boilerplate-and-rails3.1.html
-
     templater.post_bundler do
       run compass_command
     end
 
-    if design_framework == :compass_html5
-
-    end
+    apply templater.recipe("html5_boilerplate") if design_framework == :compass_html5
 
   end
 end
