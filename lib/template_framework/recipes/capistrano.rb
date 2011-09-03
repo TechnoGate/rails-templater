@@ -1,4 +1,4 @@
-if yes?("\n[Deployment] Would you like to use Capitrano for deployments? [y|n]: ", Thor::Shell::Color::BLUE)
+if yes?("\n[Deployment] Would you like to use Capitrano for deployments? [Y|n]: ", Thor::Shell::Color::BLUE)
   # Dependencies
   gem "capistrano", "~> 2.8.0", :group => :development
 
