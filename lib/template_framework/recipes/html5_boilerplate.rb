@@ -16,6 +16,12 @@ remove_file "public/javascripts/rails.js" # used to provide UJS, but it is alrea
 remove_file "app/views/layouts/_javascripts.html.haml"
 create_file "app/views/layouts/_javascripts.html.haml", templater.load_template("_javascripts.html.haml", "html5_boilerplate")
 
+remove_file "app/assets/javascripts/application.js"
+create_file "app/assets/javascripts/application.js", templater.load_template("application.js", "html5_boilerplate")
+
+directory "app/assets/stylesheets", "app/stylesheets"
+remove_dir "app/stylesheets"
+
 templater.post_bundler do
   generate 'mongoid:config'
   run 'cp config/mongoid.yml config/mongoid.yml.example'
