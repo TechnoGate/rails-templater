@@ -1,7 +1,0 @@
-embed_assets: off
-javascript_compressor: closure
-template_function: _.template
-
-javascripts:
-    common:
-        - app/views/**/*.jst

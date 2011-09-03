@@ -3,15 +3,18 @@
 .DS_Store
 profile
 *.swp
+*.esproj
+*.tmproj
 
 # Webrat log
 webrat.log
 
-# Rails3 gitignore
+# Rails3.1 gitignore
 .bundle
 db/*.sqlite3
 log/*.log
-tmp/**/*
+tmp/
+.sass-cache/
 .ackrc
 .rvmrc
 
