@@ -18,7 +18,7 @@ templater.post_bundler do
   end
 end
 
-apply(templater.recipe('remarkable')) unless no?("\n\nWould you like to add Remarkable RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+apply(templater.recipe('remarkable')) unless no?("\n\nWould you like to add Remarkable RSpec matchers? [Y|n]: ", Thor::Shell::Color::BLUE)
 
 # Fixture Replacement
 apply templater.recipe('factory_girl')
