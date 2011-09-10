@@ -5,7 +5,6 @@ describe RailsTemplater::Templater do
   let(:group) { 'sample' }
 
   its(:fixture_replacement) { should be_kind_of(RailsTemplater::FixtureReplacement) }
-  its(:javascript_framework) { should be_kind_of(RailsTemplater::JavaScriptFramework) }
   its(:orm) { should be_kind_of(RailsTemplater::Orm) }
   its(:testing_framework) { should be_kind_of(RailsTemplater::TestingFramework) }
 

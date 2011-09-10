@@ -7,7 +7,6 @@ module RailsTemplater
 
   autoload :Cli, 'rails_templater/cli'
   autoload :FixtureReplacement, 'rails_templater/fixture_replacement'
-  autoload :JavaScriptFramework, 'rails_templater/javascript_framework'
   autoload :Orm, 'rails_templater/orm'
   autoload :Templater, 'rails_templater/templater'
   autoload :TemplateEngine, 'rails_templater/template_engine'
