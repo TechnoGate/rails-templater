@@ -2,7 +2,7 @@
 remove_file "README"
 remove_file "public/index.html"
 remove_file "public/robots.txt"
-remove_file "public/images/rails.png"
+remove_file "app/assets/images/rails.png"
 
 # Create project files
 create_file "README.markdown"
