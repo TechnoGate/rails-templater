@@ -2,7 +2,8 @@ c = ask("\n[Deployment] Would you like to use Capitrano for deployments? [Y|n]: 
 unless c == "n" || c == "no"
   # Dependencies
   gem "capistrano", "~> 2.8.0", :group => :development
-  gem "capistrano-exts", "~>1.8", :group => :development
+  gem "capistrano_colors", :group => :development
+  gem "capistrano-exts", "~>1.8", :group => :development, :require => false
 
   templater.post_bundler do
     run "capify ."

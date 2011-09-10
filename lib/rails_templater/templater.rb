@@ -1,3 +1,5 @@
+require 'highline'
+
 module RailsTemplater
   class Templater
 
@@ -6,18 +8,6 @@ module RailsTemplater
     def initialize
       @post_bundler_strategies = []
       @template_framework_path = File.join(File.dirname(__FILE__), '..', 'template_framework')
-    end
-
-    def fixture_replacement
-      @fixture_replacement ||= FixtureReplacement.new
-    end
-
-    def orm
-      @orm ||= Orm.new
-    end
-
-    def javascript_framework
-      @javascript_framework ||= JavaScriptFramework.new
     end
 
     def template_engine
@@ -45,8 +35,25 @@ module RailsTemplater
 
     end
 
+    # Wizard!
     def testing_framework
       @testing_framework ||= TestingFramework.new
+    end
+
+    def fixture_replacement
+      @fixture_replacement ||= FixtureReplacement.new
+    end
+
+    def orm
+      @orm ||= Orm.new
+    end
+
+    def mocking_framework
+      @mocking_framework ||= MockingFramework.new
+    end
+
+    def ui
+      @ui ||= HighLine.new
     end
 
   end

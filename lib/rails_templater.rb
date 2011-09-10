@@ -9,6 +9,7 @@ module RailsTemplater
   autoload :Templater, 'rails_templater/templater'
   autoload :TemplateEngine, 'rails_templater/template_engine'
   autoload :TestingFramework, 'rails_templater/testing_framework'
+  autoload :MockingFramework, 'rails_templater/mocking_framework'
 
   def self.template_runner
     File.join(File.dirname(__FILE__), 'template_framework', 'template_runner.rb')

@@ -10,7 +10,7 @@ templater.post_bundler do
 
   spec_helper_path = 'spec/spec_helper.rb'
 
-  gsub_file spec_helper_path, 'config.fixture_path = "#{::Rails.root}/spec/fixtures"', ''
+  gsub_file spec_helper_path, /\n\s+# Remove this line if you're not using ActiveRecord or ActiveRecord fixtures\n\s+config.fixture_path =.+$/, ''
 
   if templater.orm.mongoid?
     gsub_file spec_helper_path, /(config.use_transactional_fixtures = true)/, '# \1'

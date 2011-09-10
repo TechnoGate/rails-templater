@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   # Run-time dependencies
   s.add_dependency "rails", "~> 3.1"
+  s.add_dependency 'highline'
 
   # Rspec
   s.add_development_dependency "rspec"

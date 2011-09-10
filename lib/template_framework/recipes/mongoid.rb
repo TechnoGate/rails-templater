@@ -1,5 +1,8 @@
 say("\nReplacing ActiveRecord with Mongoid\n", Thor::Shell::Color::YELLOW )
 
+# Remove active_record
+apply templater.recipe 'remove_active_record'
+
 gem "mongoid", "~> 2.2.0"
 gem "bson_ext", "~> 1.3.1"
 

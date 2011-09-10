@@ -32,6 +32,9 @@ after "deploy", "deploy:cleanup" # keeps only last 5 releases
 ## DO NOT TOUCH AFTER ME ##
 ###########################
 
+# Capistrano colors
+require 'capistrano_colors'
+
 # Require capistrano-exts
 require 'capistrano-exts'
 
