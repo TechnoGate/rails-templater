@@ -1,8 +1,6 @@
-#require 'active_support/core_ext/string'
+
 
 module RailsTemplater
-  extend self
-
   class NotSupportedError < Exception; end
 
   autoload :Cli, 'rails_templater/cli'
@@ -12,7 +10,7 @@ module RailsTemplater
   autoload :TemplateEngine, 'rails_templater/template_engine'
   autoload :TestingFramework, 'rails_templater/testing_framework'
 
-  def template_runner
+  def self.template_runner
     File.join(File.dirname(__FILE__), 'template_framework', 'template_runner.rb')
   end
 
