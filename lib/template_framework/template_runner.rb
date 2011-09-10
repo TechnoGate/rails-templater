@@ -4,7 +4,7 @@ require 'rails_templater'
 require File.join(File.dirname(__FILE__), 'core_ext.rb')
 
 # Removed sass - it is enabled by default in 3.1. Compass currently doesn't work
-%w(default orm testing_framework code_coverage template_engine cucumber capistrano).each do |recipe|
+%w(default orm testing_framework code_coverage template_engine cucumber devise capistrano).each do |recipe|
   apply templater.recipe(recipe)
 end
 
